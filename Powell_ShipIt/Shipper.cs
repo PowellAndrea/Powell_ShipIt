@@ -3,6 +3,7 @@
 // REMEMBER THIS
 // if (line._product.Product == product.Product){ };
 
+using System.Globalization;
 using System.Security.Cryptography.X509Certificates;
 
 namespace Powell_ShipIt
@@ -73,46 +74,11 @@ namespace Powell_ShipIt
 					count = count + thing._quantity;
 				}
 				Console.WriteLine(
-					group.Key 
+					(group.Key + "s").PadRight(10)
 					+ "\t\t"
 					+ count);
-
-				//int itemCount = 0;
-				//foreach (LineItem line in Manafest)
-				//{
-				//	if (line._product == item)
-				//	{
-				//		itemCount = itemCount + line._quantity;
-				//	}
-				//}
-				//if (itemCount != 0)
-				//{
-				//	Console.WriteLine(itemCount + " " + item.Product + "s");
-				//}
 			}
 		}
-
-
-			//// this is a hack, but I am tired.
-			//uniqueItems.Add(new Bicycle());
-			//uniqueItems.Add(new LawnMower());
-			//uniqueItems.Add(new BaseballGlove());
-			//uniqueItems.Add(new Cracker());
-
-			//foreach(IShippable item in uniqueItems)
-			//{
-			//	int itemCount = 0;
-			//	foreach (LineItem line in Manafest)
-			//	{
-			//		if(line._product == item){
-			//			itemCount = itemCount + line._quantity;
-			//		}
-			//	}
-			//	if (itemCount != 0)
-			//	{
-			//		Console.WriteLine(itemCount + " " + item.Product + "s");
-			//	}
-			//}
 
 		public void CalculateCharges()
 		{
@@ -123,8 +89,10 @@ namespace Powell_ShipIt
 				ShippingCost = ShippingCost + (Line._quantity * Line._product.ShipCost);
 			}
 
-			Console.WriteLine("Total Shipping Cost: \t"
-				+ ShippingCost
+			CultureInfo us = new CultureInfo("en-US");
+			Console.WriteLine("\nTotal Shipping Cost: \t"
+				+ ShippingCost.ToString("c", us)
+				+ "\n"
 				);
 		}
 
