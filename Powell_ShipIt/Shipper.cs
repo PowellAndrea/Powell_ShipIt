@@ -3,6 +3,8 @@
 // REMEMBER THIS
 // if (line._product.Product == product.Product){ };
 
+using System.Security.Cryptography.X509Certificates;
+
 namespace Powell_ShipIt
 {
 	public class Shipper
@@ -50,10 +52,6 @@ namespace Powell_ShipIt
 			{
 				Console.WriteLine(" has been added.");
 			}
-			
-			Console.WriteLine("Press any key to continue");
-			Console.ReadKey();
-			Console.Clear();
 			return true;
 		}
 
@@ -61,33 +59,60 @@ namespace Powell_ShipIt
 		{
 			Console.Clear();
 			Console.WriteLine("Shipment manafest:");
-			
-			// Consolidate / Filter items to single line
-			foreach (LineItem line in Manafest)
-				Console.WriteLine(line._quantity + "\t" + line._product.Product );
 
-			List<IShippable> uniqueItems = new List<IShippable>();
-			// this is a hack, but I am tired.
-			uniqueItems.Add(new Bicycle());
-			uniqueItems.Add(new LawnMower());
-			uniqueItems.Add(new BaseballGlove());
-			uniqueItems.Add(new Cracker());
+			var groupBy = from line in Manafest
+							  group line by line._product.Product into newGroup
+							  orderby newGroup.Key
+							  select newGroup;
 
-			foreach(IShippable item in uniqueItems)
+			foreach (var group in groupBy)
 			{
-				int itemCount = 0;
-				foreach (LineItem line in Manafest)
+				int count = 0;
+				foreach (var thing in group)
 				{
-					if(line._product == item){
-						itemCount = itemCount + line._quantity;
-					}
+					count = count + thing._quantity;
 				}
-				if (itemCount != 0)
-				{
-					Console.WriteLine(itemCount + " " + item.Product + "s");
-				}
+				Console.WriteLine(
+					group.Key 
+					+ "\t\t"
+					+ count);
+
+				//int itemCount = 0;
+				//foreach (LineItem line in Manafest)
+				//{
+				//	if (line._product == item)
+				//	{
+				//		itemCount = itemCount + line._quantity;
+				//	}
+				//}
+				//if (itemCount != 0)
+				//{
+				//	Console.WriteLine(itemCount + " " + item.Product + "s");
+				//}
 			}
 		}
+
+
+			//// this is a hack, but I am tired.
+			//uniqueItems.Add(new Bicycle());
+			//uniqueItems.Add(new LawnMower());
+			//uniqueItems.Add(new BaseballGlove());
+			//uniqueItems.Add(new Cracker());
+
+			//foreach(IShippable item in uniqueItems)
+			//{
+			//	int itemCount = 0;
+			//	foreach (LineItem line in Manafest)
+			//	{
+			//		if(line._product == item){
+			//			itemCount = itemCount + line._quantity;
+			//		}
+			//	}
+			//	if (itemCount != 0)
+			//	{
+			//		Console.WriteLine(itemCount + " " + item.Product + "s");
+			//	}
+			//}
 
 		public void CalculateCharges()
 		{
@@ -109,7 +134,7 @@ namespace Powell_ShipIt
 
 			Console.WriteLine("How many " + item.Product 
 				+ "s would you like to add?"
-				+ " Enter a negative number to remove an item.");
+				+ "  Enter a negative number to remove an item.");
 
 			string answer = Console.ReadLine();
 			try
