@@ -1,0 +1,30 @@
+E:\_SourceCode\Powell_ShipIt\Powell_ShipIt\obj\Debug\net6.0\Powell_ShipIt.csproj.AssemblyReference.cache
+E:\_SourceCode\Powell_ShipIt\Powell_ShipIt\obj\Debug\net6.0\Powell_ShipIt.GeneratedMSBuildEditorConfig.editorconfig
+E:\_SourceCode\Powell_ShipIt\Powell_ShipIt\obj\Debug\net6.0\Powell_ShipIt.AssemblyInfoInputs.cache
+E:\_SourceCode\Powell_ShipIt\Powell_ShipIt\obj\Debug\net6.0\Powell_ShipIt.AssemblyInfo.cs
+E:\_SourceCode\Powell_ShipIt\Powell_ShipIt\obj\Debug\net6.0\Powell_ShipIt.csproj.CoreCompileInputs.cache
+E:\_SourceCode\Powell_ShipIt\Powell_ShipIt\bin\Debug\net6.0\Powell_ShipIt.exe
+E:\_SourceCode\Powell_ShipIt\Powell_ShipIt\bin\Debug\net6.0\Powell_ShipIt.deps.json
+E:\_SourceCode\Powell_ShipIt\Powell_ShipIt\bin\Debug\net6.0\Powell_ShipIt.runtimeconfig.json
+E:\_SourceCode\Powell_ShipIt\Powell_ShipIt\bin\Debug\net6.0\Powell_ShipIt.dll
+E:\_SourceCode\Powell_ShipIt\Powell_ShipIt\bin\Debug\net6.0\Powell_ShipIt.pdb
+E:\_SourceCode\Powell_ShipIt\Powell_ShipIt\obj\Debug\net6.0\Powell_ShipIt.dll
+E:\_SourceCode\Powell_ShipIt\Powell_ShipIt\obj\Debug\net6.0\refint\Powell_ShipIt.dll
+E:\_SourceCode\Powell_ShipIt\Powell_ShipIt\obj\Debug\net6.0\Powell_ShipIt.pdb
+E:\_SourceCode\Powell_ShipIt\Powell_ShipIt\obj\Debug\net6.0\Powell_ShipIt.genruntimeconfig.cache
+E:\_SourceCode\Powell_ShipIt\Powell_ShipIt\obj\Debug\net6.0\ref\Powell_ShipIt.dll
+E:\_SourceCode\Powell_ShipIt - Backup\Powell_ShipIt\obj\Debug\net6.0\Powell_ShipIt.csproj.AssemblyReference.cache
+E:\_SourceCode\Powell_ShipIt - Backup\Powell_ShipIt\obj\Debug\net6.0\Powell_ShipIt.GeneratedMSBuildEditorConfig.editorconfig
+E:\_SourceCode\Powell_ShipIt - Backup\Powell_ShipIt\obj\Debug\net6.0\Powell_ShipIt.AssemblyInfoInputs.cache
+E:\_SourceCode\Powell_ShipIt - Backup\Powell_ShipIt\obj\Debug\net6.0\Powell_ShipIt.AssemblyInfo.cs
+E:\_SourceCode\Powell_ShipIt - Backup\Powell_ShipIt\obj\Debug\net6.0\Powell_ShipIt.csproj.CoreCompileInputs.cache
+E:\_SourceCode\Powell_ShipIt - Backup\Powell_ShipIt\obj\Debug\net6.0\Powell_ShipIt.dll
+E:\_SourceCode\Powell_ShipIt - Backup\Powell_ShipIt\obj\Debug\net6.0\refint\Powell_ShipIt.dll
+E:\_SourceCode\Powell_ShipIt - Backup\Powell_ShipIt\obj\Debug\net6.0\Powell_ShipIt.pdb
+E:\_SourceCode\Powell_ShipIt - Backup\Powell_ShipIt\bin\Debug\net6.0\Powell_ShipIt.exe
+E:\_SourceCode\Powell_ShipIt - Backup\Powell_ShipIt\bin\Debug\net6.0\Powell_ShipIt.deps.json
+E:\_SourceCode\Powell_ShipIt - Backup\Powell_ShipIt\bin\Debug\net6.0\Powell_ShipIt.runtimeconfig.json
+E:\_SourceCode\Powell_ShipIt - Backup\Powell_ShipIt\bin\Debug\net6.0\Powell_ShipIt.dll
+E:\_SourceCode\Powell_ShipIt - Backup\Powell_ShipIt\bin\Debug\net6.0\Powell_ShipIt.pdb
+E:\_SourceCode\Powell_ShipIt - Backup\Powell_ShipIt\obj\Debug\net6.0\Powell_ShipIt.genruntimeconfig.cache
+E:\_SourceCode\Powell_ShipIt - Backup\Powell_ShipIt\obj\Debug\net6.0\ref\Powell_ShipIt.dll
