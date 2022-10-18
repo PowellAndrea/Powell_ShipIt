@@ -108,7 +108,7 @@ namespace Powell_ShipIt
 			int quantity = 0;
 
 			Console.WriteLine("How many " + item.Product 
-				+ " would you like to add?"
+				+ "s would you like to add?"
 				+ " Enter a negative number to remove an item.");
 
 			string answer = Console.ReadLine();
