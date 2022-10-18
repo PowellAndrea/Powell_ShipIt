@@ -64,25 +64,10 @@ namespace Powell_ShipIt
 		{
 			Console.Clear();
 			Console.WriteLine("Shipment manafest:");
-
-			//List<IShippable> uniqueItems = new();
-			//decimal itemCount;
-			//var q = Manafest.Select(x => x._product.Product.Distinct());
-
-			//foreach (IShippable uniqueItem in q)
-			//{
-			//	itemCount = 0;
 			
+			// Consolidate / Filter items to single line
 			foreach (LineItem line in Manafest)
-			//	{
-			//		if (line._product == uniqueItem)
-			//		{
-			//			itemCount = itemCount + line._quantity;
-			//		}
-			//		Console.WriteLine(itemCount + line._product.Product);
-				Console.WriteLine(line._product.Product);
-			//}
-			Console.WriteLine("exit manafest");
+				Console.WriteLine(line._quantity + "\t" + line._product.Product );
 		}
 
 		public void CalculateCharges()
