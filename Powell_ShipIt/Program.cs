@@ -51,7 +51,7 @@ while (Continue)
 			manafest.CalculateCharges();
 			Console.WriteLine("Press any key to exit.");
 			Console.ReadKey();
-			//Continue = false;
+			Continue = false;
 			break;
 
 		default:

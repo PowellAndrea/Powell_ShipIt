@@ -81,7 +81,10 @@ namespace Powell_ShipIt
 					if(lineItem._product == item){
 						itemCount = itemCount + lineItem._quantity;
 					}
-					Console.WriteLine(itemCount + " " + item.Product);
+				}
+				if (itemCount != 0)
+				{
+					Console.WriteLine(itemCount + " " + item.Product + "s");
 				}
 			}
 		}
