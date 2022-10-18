@@ -67,7 +67,7 @@ namespace Powell_ShipIt
 				Console.WriteLine(line._quantity + "\t" + line._product.Product );
 
 			List<IShippable> uniqueItems = new List<IShippable>();
-			IShippable uniqueItem;
+			// this is a hack, but I am tired.
 			uniqueItems.Add(new Bicycle());
 			uniqueItems.Add(new LawnMower());
 			uniqueItems.Add(new BaseballGlove());
@@ -76,10 +76,10 @@ namespace Powell_ShipIt
 			foreach(IShippable item in uniqueItems)
 			{
 				int itemCount = 0;
-				foreach (LineItem lineItem in Manafest)
+				foreach (LineItem line in Manafest)
 				{
-					if(lineItem._product == item){
-						itemCount = itemCount + lineItem._quantity;
+					if(line._product == item){
+						itemCount = itemCount + line._quantity;
 					}
 				}
 				if (itemCount != 0)
