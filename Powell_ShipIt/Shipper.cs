@@ -3,9 +3,6 @@
 // REMEMBER THIS
 // if (line._product.Product == product.Product){ };
 
-using System.Net.Http.Headers;
-using System.Security.Cryptography.X509Certificates;
-
 namespace Powell_ShipIt
 {
 	public class Shipper
@@ -68,6 +65,25 @@ namespace Powell_ShipIt
 			// Consolidate / Filter items to single line
 			foreach (LineItem line in Manafest)
 				Console.WriteLine(line._quantity + "\t" + line._product.Product );
+
+			List<IShippable> uniqueItems = new List<IShippable>();
+			IShippable uniqueItem;
+			uniqueItems.Add(new Bicycle());
+			uniqueItems.Add(new LawnMower());
+			uniqueItems.Add(new BaseballGlove());
+			uniqueItems.Add(new Cracker());
+
+			foreach(IShippable item in uniqueItems)
+			{
+				int itemCount = 0;
+				foreach (LineItem lineItem in Manafest)
+				{
+					if(lineItem._product == item){
+						itemCount = itemCount + lineItem._quantity;
+					}
+					Console.WriteLine(itemCount + " " + item.Product);
+				}
+			}
 		}
 
 		public void CalculateCharges()
@@ -79,8 +95,8 @@ namespace Powell_ShipIt
 				ShippingCost = ShippingCost + (Line._quantity * Line._product.ShipCost);
 			}
 
-			Console.WriteLine("Total Shipping: \t"
-				+ ShippingCost.ToString(format:"C0")
+			Console.WriteLine("Total Shipping Cost: \t"
+				+ ShippingCost
 				);
 		}
 
